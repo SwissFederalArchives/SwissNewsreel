@@ -50,7 +50,6 @@ url <- "https://www.recherche.bar.admin.ch/recherche/api/v1/entities/Search"
 # test$entities$items[[1]]$creationPeriod$text
 
 # Fetch all data by bunches of 100 ----
-stepstarts <- seq(1, ceiling(totalpages/100)*100, by = 100)
 decadecounts <- data.table(decade = seq(1940,1970,by=10))
 decadecounts[,count:= sapply(decade, function(x){
     res <- makerequest(1,1,x)
